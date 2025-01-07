@@ -1,4 +1,7 @@
-// AKfycbzSjRrrcZSUVM4algbcOgHjGPgvr8wngB14MXh8pYc0bzw7gJsLwfzCKZQBmUz2GaFS
+
+$(window).on('load', function () {
+    $('#loadingScreen').hide();
+}) //end load
 
 $(document).ready(function() {
     $.ajax({
@@ -44,39 +47,41 @@ $(document).ready(function() {
         }
     });//end ajax
 
+    // début PWA
     let deferredPrompt;
-    const installButton = document.getElementById('PWAbutton');
+    const installButton = $('#PWAbutton')[0];
     installButton.style.display = 'none';
     const msgerreur = "Installation non disponible sur iOS";
 
     // Détection si l'installation est possible
     window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
+        e.preventDefault();
+        deferredPrompt = e;
 
-    // Vérification de la plateforme
-    if (/iPhone|iPad|iPod/.test(navigator.platform)) {
-        installButton.html(msgerreur);
-        installButton.disabled = true;
-    } else {
-        installButton.style.display = 'block';
-    }
+        // Vérification de la plateforme
+        if (/iPhone|iPad|iPod/.test(navigator.platform)) {
+            installButton.html(msgerreur);
+            installButton.disabled = true;
+        } else {
+            installButton.style.display = 'block';
+        }
     });
 
     // Gestion du clic sur le bouton d'installation
     installButton.addEventListener('click', async () => {
-    if (!deferredPrompt) return;
+        if (!deferredPrompt) return;
 
-    const result = await deferredPrompt.prompt();
-    console.log(`Installation ${result.outcome}`);
-    deferredPrompt = null;
-    installButton.style.display = 'none';
+        const result = await deferredPrompt.prompt();
+        console.log(`Installation ${result.outcome}`);
+        deferredPrompt = null;
+        installButton.style.display = 'none';
     });
 
     // Détection si l'app est déjà installée
     window.addEventListener('appinstalled', () => {
-    deferredPrompt = null;
-    installButton.style.display = 'none';
-});
+        deferredPrompt = null;
+        installButton.style.display = 'none';
+    }); // fin PWA
+      
     
-});
+}); //end ready
