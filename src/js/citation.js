@@ -7,7 +7,8 @@ $(document).ready(function() {
         dataType: 'json',
         success: function(data) {
             $.each(data, function(index, item) {
-                
+                console.log('hello');
+                console.log(data);
             });
         },
         error: function(xhr, status, error) {
