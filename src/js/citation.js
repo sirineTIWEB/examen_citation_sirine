@@ -21,7 +21,7 @@ $(document).ready(function() {
             // $.each(data, function(index, item) {
                 monAuteur += "<img src='img/" + randomItem.Photo + "' alt='"+randomItem.Auteur+"' class='rounded-full h-16 aspect-square object-cover' /> <h2 class='mx-4 font-serif font-medium'>" + randomItem.Auteur + "</h2> <p class='border-l pl-4 italic border-blue-900'>" + randomItem.Description + "</p>";
 
-                maCitation += "<h1 class='text-5xl font-serif'>" + randomItem.Citation + "</h1>";
+                maCitation += "<h1 class='text-5xl font-serif text-center md:text-xs'>" + randomItem.Citation + "</h1>";
 
 
 
