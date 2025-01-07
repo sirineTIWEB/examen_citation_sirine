@@ -19,13 +19,9 @@ $(document).ready(function() {
             var randomItem = data[Math.floor(Math.random() * data.length)];
 
             // $.each(data, function(index, item) {
-                monAuteur += "<img src='img/" + randomItem.Photo + "' alt='"+randomItem.Auteur+"' class='rounded-full h-16 aspect-square object-cover' /> <h2 class='mx-4 font-serif font-medium'>" + randomItem.Auteur + "</h2> <p class='border-l pl-4 italic border-blue-900'>" + randomItem.Description + "</p>";
+                monAuteur += "<img src='img/" + randomItem.Photo + "' alt='"+randomItem.Auteur+"' class='rounded-full h-16 aspect-square object-cover' /> <h2 class='mx-4 font-serif font-medium md:mx-4'>" + randomItem.Auteur + "</h2> <p class='md:pl-4 border-l pl-4 italic border-blue-900'>" + randomItem.Description + "</p>";
 
-                maCitation += "<h1 class='text-[clamp(1.25rem,3cqw,3rem)] font-serif text-center'>" + randomItem.Citation + "</h1>";
-
-
-
-
+                maCitation += "<h1 class='text-5xl font-serif text-center md:text-sm'>" + randomItem.Citation + "</h1>";
 
                 $('.auteur').html(monAuteur);
                 $('.citation').append(maCitation);
