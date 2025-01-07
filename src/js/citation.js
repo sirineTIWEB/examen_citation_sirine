@@ -9,6 +9,11 @@ $(document).ready(function() {
 
             $('#loadingScreen').hide();
 
+            document.documentElement.classList.toggle(
+                'dark',
+                localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+            );
+
             var monAuteur ="";
             var maCitation = "";
             var randomItem = data[Math.floor(Math.random() * data.length)];
