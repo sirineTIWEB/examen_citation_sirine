@@ -1,0 +1,21 @@
+{
+    "name": "Citation du jour, Sirine",
+    "short_name": "CitationJournalière",
+    "description": "à chaque rafraichissement de la page, une nouvelle citation s'affiche. Développé au cours d'un examen, par Sirine",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "rgb(255 247 237)",
+    "theme_color": "rgb(255 247 237)",
+    "icons": [
+        {
+        "src": "img/app.png",
+        "sizes": "192x192",
+        "type": "app/png"
+        },
+        {
+        "src": "img/app.png",
+        "sizes": "512x512",
+        "type": "app/png"
+        }
+    ]
+}
