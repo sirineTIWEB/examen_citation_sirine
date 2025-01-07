@@ -8,12 +8,12 @@
     "theme_color": "rgb(255 247 237)",
     "icons": [
         {
-        "src": "icones/icon-192x192.png",
+        "src": "img/app.png",
         "sizes": "192x192",
         "type": "app/png"
         },
         {
-        "src": "icones/icon-512x512.png",
+        "src": "img/app.png",
         "sizes": "512x512",
         "type": "app/png"
         }
