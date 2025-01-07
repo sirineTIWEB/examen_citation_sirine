@@ -754,6 +754,13 @@ video {
   color: rgb(255 247 237 / var(--tw-text-opacity, 1));
 }
 
+@media (min-width: 768px) {
+  .md\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .dark\:border-orange-50 {
     --tw-border-opacity: 1;

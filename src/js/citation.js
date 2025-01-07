@@ -1,15 +1,13 @@
-
-$(window).on('load', function () {
-    $('#loadingScreen').hide();
-}) //end load
-
 $(document).ready(function() {
     $.ajax({
         url: "https://script.google.com/macros/s/AKfycbzSjRrrcZSUVM4algbcOgHjGPgvr8wngB14MXh8pYc0bzw7gJsLwfzCKZQBmUz2GaFS/exec",
         type: 'GET',
         dataType: 'json',
+        loading: $('#loadingScreen').show(),
         success: function(data) {
             console.log('data:', data);
+
+            $('#loadingScreen').hide();
 
             var monAuteur ="";
             var maCitation = "";
@@ -37,7 +35,7 @@ $(document).ready(function() {
 
                     monAuteur += "<img src='img/" + randomItemButtoned.Photo + "' alt='"+randomItemButtoned.Auteur+"' class='rounded-full h-16 aspect-square object-cover' /> <h2 class='mx-4 font-serif font-medium'>" + randomItemButtoned.Auteur + "</h2> <p class='border-l pl-4 italic border-blue-900'>" + randomItemButtoned.Description + "</p>";
 
-                    maCitation += "<div class='flex justify-between w-full'><h1 class='text-6xl font-serif'>''</h1><h1 class='text-6xl font-serif'>''</h1></div><h1 class='text-5xl font-serif text-center'>" + randomItemButtoned.Citation + "</h1>";
+                    maCitation += "<div class='flex justify-between w-full'><h1 class='text-6xl font-serif'>''</h1><h1 class='text-6xl font-serif'>''</h1></div><h1 class='text-5xl font-serif text-center md:text-xs'>" + randomItemButtoned.Citation + "</h1>";
 
                     $('.auteur').html(monAuteur);
                     $('.citation').append(maCitation);
