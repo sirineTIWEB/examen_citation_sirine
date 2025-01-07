@@ -44,7 +44,7 @@ $(document).ready(function() {
     let deferredPrompt;
     const installButton = $('#PWAbutton')[0];
     installButton.style.display = 'none';
-    const msgerreur = "Installation non disponible sur iOS";
+    const msgerreur = "";
 
     // Détection si l'installation est possible
     window.addEventListener('beforeinstallprompt', (e) => {
@@ -53,6 +53,7 @@ $(document).ready(function() {
 
         // Vérification de la plateforme
         if (/iPhone|iPad|iPod/.test(navigator.platform)) {
+            msgerreur = "L'installation n'est pas possible sur iOS";
             installButton.html(msgerreur);
             installButton.disabled = true;
         } else {
