@@ -21,7 +21,7 @@ $(document).ready(function() {
             // $.each(data, function(index, item) {
                 monAuteur += "<img src='img/" + randomItem.Photo + "' alt='"+randomItem.Auteur+"' class='rounded-full h-16 aspect-square object-cover' /> <h2 class='mx-4 font-serif font-medium'>" + randomItem.Auteur + "</h2> <p class='border-l pl-4 italic border-blue-900'>" + randomItem.Description + "</p>";
 
-                maCitation += "<h1 class='text-5xl font-serif text-center md:text-xs'>" + randomItem.Citation + "</h1>";
+                maCitation += "<h1 class='text-[clamp(1.25rem,3cqw,3rem)] font-serif text-center'>" + randomItem.Citation + "</h1>";
 
 
 
@@ -31,19 +31,7 @@ $(document).ready(function() {
                 $('.citation').append(maCitation);
 
                 $('#RefreshButton').click(function() {
-                    var monAuteur ="";
-                    var maCitation = "";
-                    $('.citation').empty();
-                    const randomItemButtoned = data[Math.floor(Math.random() * data.length)];
-
-                    if (randomItemButtoned.Photo )
-
-                    monAuteur += "<img src='img/" + randomItemButtoned.Photo + "' alt='"+randomItemButtoned.Auteur+"' class='rounded-full h-16 aspect-square object-cover' /> <h2 class='mx-4 font-serif font-medium'>" + randomItemButtoned.Auteur + "</h2> <p class='border-l pl-4 italic border-blue-900'>" + randomItemButtoned.Description + "</p>";
-
-                    maCitation += "<div class='flex justify-between w-full'><h1 class='text-6xl font-serif'>''</h1><h1 class='text-6xl font-serif'>''</h1></div><h1 class='text-5xl font-serif text-center md:text-xs'>" + randomItemButtoned.Citation + "</h1>";
-
-                    $('.auteur').html(monAuteur);
-                    $('.citation').append(maCitation);
+                    window.location.reload();
                 });
             // });
         },

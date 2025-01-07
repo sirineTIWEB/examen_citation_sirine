@@ -727,6 +727,14 @@ video {
   line-height: 1;
 }
 
+.text-clamp {
+  font-size: clamp(1rem, 5vw, 3rem);
+}
+
+.text-\[clamp\(1\.25rem\2c 3cqw\2c 3rem\)\] {
+  font-size: clamp(1.25rem,3cqw,3rem);
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -763,11 +771,6 @@ video {
   .md\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-
-  .md\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 }
 
