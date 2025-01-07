@@ -628,18 +628,6 @@ video {
   height: 100vh;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-2 {
-  height: 0.5rem;
-}
-
-.h-\[10\%\] {
-  height: 10%;
-}
-
 .w-\[80vw\] {
   width: 80vw;
 }
@@ -729,23 +717,14 @@ video {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-.text-\[clamp\(1\.25rem\2c 3cqw\2c 3rem\)\] {
-  font-size: clamp(1.25rem,3cqw,3rem);
-}
-
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .font-medium {
@@ -759,6 +738,10 @@ video {
 .text-blue-950 {
   --tw-text-opacity: 1;
   color: rgb(23 37 84 / var(--tw-text-opacity, 1));
+}
+
+.mix-blend-difference {
+  mix-blend-mode: difference;
 }
 
 .blur {
@@ -793,11 +776,6 @@ video {
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 }
 
